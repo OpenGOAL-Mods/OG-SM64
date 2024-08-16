@@ -333,13 +333,13 @@
             'level-tasks-info
             :level-name-id (text-id training-level-name)
             :text-group-index 1
-            :nb-of-tasks 4
+            :nb-of-tasks 4 ;;5
             :buzzer-task-index 3
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task training-gimmie)
@@ -387,18 +387,29 @@
                            (text-id training-buzzer-task-name)
                            (text-id training-buzzer-task-name)
                            (text-id training-buzzer-task-name)
-                           (text-id zero)))))
+                           (text-id zero)))
+               ;;     (new 'static 'task-info-data
+               ;;          :task-id (game-task training-100-orbs)
+               ;;          :task-name
+               ;;          (new 'static 'array text-id 4
+               ;;               (text-id training-100-orbs)
+               ;;               (text-id training-100-orbs)
+               ;;               (text-id training-100-orbs)
+               ;;               (text-id zero)
+               ;;               )
+               ;;          )
+               ))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id village1-level-name)
             :text-group-index 1
-            :nb-of-tasks 6
+            :nb-of-tasks 6 ;;7
             :buzzer-task-index 5
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task village1-mayor-money)
@@ -463,18 +474,29 @@
                       'task-info-data
                       :task-id (game-task village1-buzzer)
                       :task-name
-                      (new 'static 'array text-id 4 (text-id beach-buzzer) (text-id beach-buzzer) (text-id beach-buzzer) (text-id zero)))))
+                      (new 'static 'array text-id 4 (text-id beach-buzzer) (text-id beach-buzzer) (text-id beach-buzzer) (text-id zero)))
+               ;;     (new 'static 'task-info-data
+               ;;          :task-id (game-task village1-100-orbs)
+               ;;          :task-name
+               ;;          (new 'static 'array text-id 4
+               ;;               (text-id village1-100-orbs)
+               ;;               (text-id village1-100-orbs)
+               ;;               (text-id village1-100-orbs)
+               ;;               (text-id zero)
+               ;;               )
+               ;;          )
+               ))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id beach-level-name)
             :text-group-index 1
-            :nb-of-tasks 8
+            :nb-of-tasks 9
             :buzzer-task-index 7
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task beach-ecorocks)
@@ -521,18 +543,28 @@
                       'task-info-data
                       :task-id (game-task beach-buzzer)
                       :task-name
-                      (new 'static 'array text-id 4 (text-id beach-buzzer) (text-id beach-buzzer) (text-id beach-buzzer) (text-id zero)))))
+                      (new 'static 'array text-id 4 (text-id beach-buzzer) (text-id beach-buzzer) (text-id beach-buzzer) (text-id zero)))
+                 (new 'static 'task-info-data
+                        :task-id (game-task beach-100-orbs)
+                        :task-name
+                        (new 'static 'array text-id 4
+                             (text-id beach-100-orbs)
+                             (text-id beach-100-orbs)
+                             (text-id beach-100-orbs)
+                             (text-id zero)
+                             )
+                        )))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id jungle-level-name)
             :text-group-index 1
-            :nb-of-tasks 8
+            :nb-of-tasks 9
             :buzzer-task-index 7
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task jungle-lurkerm)
@@ -601,18 +633,29 @@
                       'task-info-data
                       :task-id (game-task jungle-buzzer)
                       :task-name
-                      (new 'static 'array text-id 4 (text-id beach-buzzer) (text-id beach-buzzer) (text-id beach-buzzer) (text-id zero)))))
+                      (new 'static 'array text-id 4 (text-id beach-buzzer) (text-id beach-buzzer) (text-id beach-buzzer) (text-id zero)))
+                 (new 'static 'task-info-data
+                        :task-id (game-task jungle-100-orbs)
+                        :task-name
+                        (new 'static 'array text-id 4
+                             (text-id jungle-100-orbs)
+                             (text-id jungle-100-orbs)
+                             (text-id jungle-100-orbs)
+                             (text-id zero)
+                             )
+                        )
+                      ))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id misty-level-name)
             :text-group-index 1
-            :nb-of-tasks 8
+            :nb-of-tasks 9
             :buzzer-task-index 7
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task misty-muse)
@@ -688,18 +731,29 @@
                       'task-info-data
                       :task-id (game-task misty-buzzer)
                       :task-name
-                      (new 'static 'array text-id 4 (text-id beach-buzzer) (text-id beach-buzzer) (text-id beach-buzzer) (text-id zero)))))
+                      (new 'static 'array text-id 4 (text-id beach-buzzer) (text-id beach-buzzer) (text-id beach-buzzer) (text-id zero)))
+                 (new 'static 'task-info-data
+                        :task-id (game-task misty-100-orbs)
+                        :task-name
+                        (new 'static 'array text-id 4
+                             (text-id misty-100-orbs)
+                             (text-id misty-100-orbs)
+                             (text-id misty-100-orbs)
+                             (text-id zero)
+                             )
+                        )
+                      ))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id firecanyon-level-name)
             :text-group-index 5
-            :nb-of-tasks 2
+            :nb-of-tasks 2 ;;3
             :buzzer-task-index 1
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task firecanyon-end)
@@ -716,18 +770,29 @@
                            (text-id firecanyon-buzzer)
                            (text-id firecanyon-buzzer)
                            (text-id firecanyon-buzzer)
-                           (text-id zero)))))
+                           (text-id zero)))
+               ;;     (new 'static 'task-info-data
+               ;;          :task-id (game-task firecanyon-100-orbs)
+               ;;          :task-name
+               ;;          (new 'static 'array text-id 4
+               ;;               (text-id firecanyon-100-orbs)
+               ;;               (text-id firecanyon-100-orbs)
+               ;;               (text-id firecanyon-100-orbs)
+               ;;               (text-id zero)
+               ;;               )
+               ;;          )
+                           ))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id village2-level-name)
             :text-group-index 2
-            :nb-of-tasks 6
+            :nb-of-tasks 6 ;;7
             :buzzer-task-index 5
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task village2-gambler-money)
@@ -792,18 +857,29 @@
                       'task-info-data
                       :task-id (game-task village2-buzzer)
                       :task-name
-                      (new 'static 'array text-id 4 (text-id generic-buzzer) (text-id generic-buzzer) (text-id generic-buzzer) (text-id zero)))))
+                      (new 'static 'array text-id 4 (text-id generic-buzzer) (text-id generic-buzzer) (text-id generic-buzzer) (text-id zero)))
+               ;;     (new 'static 'task-info-data
+               ;;          :task-id (game-task village2-100-orbs)
+               ;;          :task-name
+               ;;          (new 'static 'array text-id 4
+               ;;               (text-id village2-100-orbs)
+               ;;               (text-id village2-100-orbs)
+               ;;               (text-id village2-100-orbs)
+               ;;               (text-id zero)
+               ;;               )
+               ;;          )
+                      ))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id sunken-level-name)
             :text-group-index 2
-            :nb-of-tasks 8
+            :nb-of-tasks 9
             :buzzer-task-index 7
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task sunken-room)
@@ -871,18 +947,29 @@
                       'task-info-data
                       :task-id (game-task sunken-buzzer)
                       :task-name
-                      (new 'static 'array text-id 4 (text-id generic-buzzer) (text-id generic-buzzer) (text-id generic-buzzer) (text-id zero)))))
+                      (new 'static 'array text-id 4 (text-id generic-buzzer) (text-id generic-buzzer) (text-id generic-buzzer) (text-id zero)))
+                   (new 'static 'task-info-data
+                        :task-id (game-task sunken-100-orbs)
+                        :task-name
+                        (new 'static 'array text-id 4
+                             (text-id sunken-100-orbs)
+                             (text-id sunken-100-orbs)
+                             (text-id sunken-100-orbs)
+                             (text-id zero)
+                             )
+                        )
+                      ))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id swamp-level-name)
             :text-group-index 2
-            :nb-of-tasks 8
+            :nb-of-tasks 9
             :buzzer-task-index 7
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task swamp-flutflut)
@@ -922,18 +1009,29 @@
                       'task-info-data
                       :task-id (game-task swamp-buzzer)
                       :task-name
-                      (new 'static 'array text-id 4 (text-id generic-buzzer) (text-id generic-buzzer) (text-id generic-buzzer) (text-id zero)))))
+                      (new 'static 'array text-id 4 (text-id generic-buzzer) (text-id generic-buzzer) (text-id generic-buzzer) (text-id zero)))
+                   (new 'static 'task-info-data
+                        :task-id (game-task swamp-100-orbs)
+                        :task-name
+                        (new 'static 'array text-id 4
+                             (text-id swamp-100-orbs)
+                             (text-id swamp-100-orbs)
+                             (text-id swamp-100-orbs)
+                             (text-id zero)
+                             )
+                        )
+                      ))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id rolling-level-name)
             :text-group-index 2
-            :nb-of-tasks 8
+            :nb-of-tasks 9
             :buzzer-task-index 7
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task rolling-moles)
@@ -1001,18 +1099,29 @@
                       'task-info-data
                       :task-id (game-task rolling-buzzer)
                       :task-name
-                      (new 'static 'array text-id 4 (text-id generic-buzzer) (text-id generic-buzzer) (text-id generic-buzzer) (text-id zero)))))
+                      (new 'static 'array text-id 4 (text-id generic-buzzer) (text-id generic-buzzer) (text-id generic-buzzer) (text-id zero)))
+                   (new 'static 'task-info-data
+                        :task-id (game-task rolling-100-orbs)
+                        :task-name
+                        (new 'static 'array text-id 4
+                             (text-id rolling-100-orbs)
+                             (text-id rolling-100-orbs)
+                             (text-id rolling-100-orbs)
+                             (text-id zero)
+                             )
+                        )
+                      ))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id ogre-level-name)
             :text-group-index 6
-            :nb-of-tasks 4
+            :nb-of-tasks 4 ;;5
             :buzzer-task-index 3
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task ogre-boss)
@@ -1039,18 +1148,29 @@
                       'task-info-data
                       :task-id (game-task ogre-buzzer)
                       :task-name
-                      (new 'static 'array text-id 4 (text-id ogre-buzzer) (text-id ogre-buzzer) (text-id ogre-buzzer) (text-id zero)))))
+                      (new 'static 'array text-id 4 (text-id ogre-buzzer) (text-id ogre-buzzer) (text-id ogre-buzzer) (text-id zero)))
+               ;;     (new 'static 'task-info-data
+               ;;          :task-id (game-task ogre-100-orbs)
+               ;;          :task-name
+               ;;          (new 'static 'array text-id 4
+               ;;               (text-id ogre-100-orbs)
+               ;;               (text-id ogre-100-orbs)
+               ;;               (text-id ogre-100-orbs)
+               ;;               (text-id zero)
+               ;;               )
+               ;;          )
+                      ))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id village3-level-name)
             :text-group-index 3
-            :nb-of-tasks 8
+            :nb-of-tasks 8 ;;9
             :buzzer-task-index 7
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task village3-miner-money1)
@@ -1146,18 +1266,29 @@
                            (text-id village3-buzzer)
                            (text-id village3-buzzer)
                            (text-id village3-buzzer)
-                           (text-id zero)))))
+                           (text-id zero)))
+               ;;     (new 'static 'task-info-data
+               ;;          :task-id (game-task village3-100-orbs)
+               ;;          :task-name
+               ;;          (new 'static 'array text-id 4
+               ;;               (text-id village3-100-orbs)
+               ;;               (text-id village3-100-orbs)
+               ;;               (text-id village3-100-orbs)
+               ;;               (text-id zero)
+               ;;               )
+               ;;          )
+                           ))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id snow-level-name)
             :text-group-index 3
-            :nb-of-tasks 8
+            :nb-of-tasks 9
             :buzzer-task-index 7
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task snow-eggtop)
@@ -1211,18 +1342,29 @@
                            (text-id village3-buzzer)
                            (text-id village3-buzzer)
                            (text-id village3-buzzer)
-                           (text-id zero)))))
+                           (text-id zero)))
+                   (new 'static 'task-info-data
+                        :task-id (game-task snow-100-orbs)
+                        :task-name
+                        (new 'static 'array text-id 4
+                             (text-id snow-100-orbs)
+                             (text-id snow-100-orbs)
+                             (text-id snow-100-orbs)
+                             (text-id zero)
+                             )
+                        )
+                           ))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id cave-level-name)
             :text-group-index 3
-            :nb-of-tasks 8
+            :nb-of-tasks 9
             :buzzer-task-index 7
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task cave-gnawers)
@@ -1304,18 +1446,29 @@
                            (text-id village3-buzzer)
                            (text-id village3-buzzer)
                            (text-id village3-buzzer)
-                           (text-id zero)))))
+                           (text-id zero)))
+                   (new 'static 'task-info-data
+                        :task-id (game-task cave-100-orbs)
+                        :task-name
+                        (new 'static 'array text-id 4
+                             (text-id cave-100-orbs)
+                             (text-id cave-100-orbs)
+                             (text-id cave-100-orbs)
+                             (text-id zero)
+                             )
+                        )
+                           ))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id lavatube-level-name)
             :text-group-index 3
-            :nb-of-tasks 2
+            :nb-of-tasks 2 ;;3
             :buzzer-task-index 1
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task lavatube-end)
@@ -1332,18 +1485,29 @@
                            (text-id lavatube-buzzer)
                            (text-id lavatube-buzzer)
                            (text-id lavatube-buzzer)
-                           (text-id zero)))))
+                           (text-id zero)))
+               ;;     (new 'static 'task-info-data
+               ;;          :task-id (game-task lavatube-100-orbs)
+               ;;          :task-name
+               ;;          (new 'static 'array text-id 4
+               ;;               (text-id lavatube-100-orbs)
+               ;;               (text-id lavatube-100-orbs)
+               ;;               (text-id lavatube-100-orbs)
+               ;;               (text-id zero)
+               ;;               )
+               ;;          )
+                           ))
        (new 'static
             'level-tasks-info
             :level-name-id (text-id citadel-level-name)
             :text-group-index 4
-            :nb-of-tasks 5
+            :nb-of-tasks 6
             :buzzer-task-index 4
             :task-info
             (new 'static
                  'array
                  task-info-data
-                 8
+                 9
                  (new 'static
                       'task-info-data
                       :task-id (game-task citadel-sage-blue)
@@ -1396,7 +1560,18 @@
                       'task-info-data
                       :task-id (game-task citadel-buzzer)
                       :task-name
-                      (new 'static 'array text-id 4 (text-id citadel-buzzer) (text-id citadel-buzzer) (text-id citadel-buzzer) (text-id zero)))))))
+                      (new 'static 'array text-id 4 (text-id citadel-buzzer) (text-id citadel-buzzer) (text-id citadel-buzzer) (text-id zero)))
+                   (new 'static 'task-info-data
+                        :task-id (game-task citadel-100-orbs)
+                        :task-name
+                        (new 'static 'array text-id 4
+                             (text-id citadel-100-orbs)
+                             (text-id citadel-100-orbs)
+                             (text-id citadel-100-orbs)
+                             (text-id zero)
+                             )
+                        )
+                      ))))
 
 ;; goes down by 24 or 23 every time
 (define *task-egg-starting-x* (new 'static 'boxed-array :type int32 218 194 171 147 124 100 77 53 30))

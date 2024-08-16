@@ -235,7 +235,7 @@
   :code
     (behavior ()
       (set-time! (-> self trigger-time))
-      (while (and (not (time-elapsed? (-> self trigger-time) (seconds 2))) (not (movie?)))
+      (while (and (not (time-elapsed? (-> self trigger-time) (seconds 1))) (not (movie?)))
         (set! (-> self offset) 0)
         (draw-icons self)
         (suspend))

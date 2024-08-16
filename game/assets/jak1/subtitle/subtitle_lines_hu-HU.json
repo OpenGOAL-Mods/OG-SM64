@@ -304,21 +304,21 @@
       "EGY LEGFONTOSABB LEHETŐSÉGETLEN PILLANATBAN ELFOPTA.",
       "TEGNAP KELLETT INDULNI UTAZÁSAIRA",
       "DE ÚGY TŰNIK, FONTOS RÖVID VAGYOK A RÉGI ELŐFORGALOMBAN.",
-      "A SZAVAM ÍGY ÍGY VAN 90,",
+      "A SZAVAM ÍGY ÍGY VAN 0,",
       "DE GYŰJTEM, HOGY AZ IFJÚ BARÁTOD, TUDOD, A",
       "KIS BOSZSZANTÍTÓ NYOMORULT CSÚNYA",
       "TALÁN CSAK A SZÓRAKOZÁS HELYÉNEK FELVÉTELTE ŐKET.",
       "AMÚGY LENNE LEGYEN KEDVES VÉG BÁCSÁTÁT HITELNI",
-      "90 ELŐFORMÁZÓ GOMB, HOGY BE KEZDHETŐ?",
+      "0 ELŐFORMÁZÓ GOMB, HOGY BE KEZDHETŐ?",
       "VISSZA KÍNÁLNAK EGY TELJESÍTMÉNY CELLET."
     ],
     "explorer-reminder-1": [
       "MIT? NEM VAN MEG A TELJES TÁROLÁST? HARRUMPH!",
-      "NOS, 90-NÉL KEVESEBB ELŐFORMÁT",
+      "NOS, 0-NÉL KEVESEBB ELŐFORMÁT",
       "ÉS NINCS ESÉLYEM AZ ELJÁRÁSRA, KEDVES FIÚ."
     ],
     "explorer-reminder-2": [
-      "Ó, NÉZD MEG ITT, AZ AKCIÓ 90 ELŐFORMÁJÁRA VONATKOZIK EGY TELJESELLÉKHEZ.",
+      "Ó, NÉZD MEG ITT, AZ AKCIÓ 0 ELŐFORMÁJÁRA VONATKOZIK EGY TELJESELLÉKHEZ.",
       "EGY NYILVÁNOS KERESKEDELEM."
     ],
     "explorer-resolution": [
@@ -407,7 +407,7 @@
       "BIZTOSÍTS BE, AZ OKOS PÉNZ A SZÖRNYEN VAN.",
       "EZ A TÉM NAGYON KIÉPÍTETT!",
       "VAN, VAN EGY JAVASLAT.",
-      "HOZZ EL 90 ORBOT, HOGY VISSZATALÁLJON A LÁBAMRA ÉS KI EBBEN A HORDÓBÓL,",
+      "HOZZ EL 0 ORBOT, HOGY VISSZATALÁLJON A LÁBAMRA ÉS KI EBBEN A HORDÓBÓL,",
       "ÉS VISSZA ADOK NEKED EGY ERŐCELLÁT.",
       "ÉS HA JÁTÉK, VAN MÉG EGY ONLINE FOGADÁSOM.",
       "NAGY VISSZATÉRÉSEM!",
@@ -417,7 +417,7 @@
     ],
     "gambler-reminder-money": [
       "HÉ. NE FELEJDJ MEG AZOKAT A ORBUSOKAT, AMELYEKRE KELL.",
-      "90 SZEREZNEK EGYET. EGY TELJESELLEMZŐ, AZ!"
+      "0 SZEREZNEK EGYET. EGY TELJESELLEMZŐ, AZ!"
     ],
     "gambler-reminder-race": [
       "NOS, MIRE VÁRSZ?",
@@ -451,7 +451,7 @@
       "IGEN, VILLÁM VAKONYOK... MINKET GONDOLJUK.",
       "TALÁN KÉT TELJESÍTMÉNYELEMÉRE!",
       "SZÉP PRÓBÁLKOZÁS. DE HAJNÁL LENNE VÁLNI MÁS TELJESÍTMÉNYCELTŐL",
-      "HA KETTEN TALÁLTOK NEKEM A KUTATÓ BERENDEZÉSEMHEZ 90 ELŐFORMÁT.",
+      "HA KETTEN TALÁLTOK NEKEM A KUTATÓ BERENDEZÉSEMHEZ 0 ELŐFORMÁT.",
       "ELFOGADHATÓ?"
     ],
     "geologist-reminder-moles": [
@@ -573,7 +573,7 @@
       "HA BÁRMILYEN VÉLETLENÜL ÉRDEKLŐDNEK AZ ÚJRAVÁLASZTÁSI KAMPÁNYOMHOZ HOZZÁJÁRULÁSHOZ,",
       "TALÁN HAJNÁL VÁLASZOK MÉG MÉG EGY MÁSIK ERŐSELTŐL!",
       "A MINIMÁLIS HOZZÁJÁRULÁS Ó, NAGYON SZERÉNY...",
-      "90 ELŐZŐ GOMB."
+      "0 ELŐZŐ GOMB."
     ],
     "mayor-reminder-beams": [
       "MÁR VISSZA? ÉS AZ ECO GERENDÁK RÖGZÍTÉSE NÉLKÜL?",
@@ -581,7 +581,7 @@
     ],
     "mayor-reminder-donation": [
       "AH, HOGY ADOMÁNYOZHATOK KAMPÁNYOMNAK, OH HO HO HO.",
-      "90 PRECURSOR ORBS VÁSÁROL NEKED EGY TELJESELLEGET, KÖSZÖNJÜK."
+      "0 PRECURSOR ORBS VÁSÁROL NEKED EGY TELJESELLEGET, KÖSZÖNJÜK."
     ],
     "mayor-resolution-beams": [
       "Ó HO HO, MILYEN CSODÁLATOS LÁTVA! KÖSZÖNÖM!",
@@ -619,7 +619,7 @@
       "AMIT ITT MADÁR-AGY PRÓBÁL MONDNI,",
       "LEHET NÉHÁNY TELJESÍTMÉNYCELLÁNK,",
       "ÉS LEHET, HOGY HAJLANDÓAK LENNÉNK MEGVÁLNI TŐLÜK, MERT...",
-      "MINDENKÉNT 90 ORBS.",
+      "MINDENKÉNT 0 ORBS.",
       "HOL HALLOTTAM EZT MÉG?",
       "HÉ, HOGY KÉT ZSENI HOGY VÁRJA KI INNEN EZT A NAGY KÖRNYÉKET?",
       "NOS, SMARTYPANTS, MÉG TIZENKÉT ÉV KERÜLÜNK, HOGY MEGÁLLAPÍTSUK EZT.",
@@ -641,9 +641,9 @@
     ],
     "minershort-reminder-1-orbs": [
       "NE FELEJTSÜK EL AZ AKCIÓNKAT. HOZZ EL 100 ORBS-T.",
-      "DUH... 90-ET MONDTAD.",
+      "DUH... 0-ET MONDTAD.",
       "WILLARD!",
-      "BÍRSÁG. 90 ORBS EGY ERŐSEJTA."
+      "BÍRSÁG. 0 ORBS EGY ERŐSEJTA."
     ],
     "minershort-reminder-1-switch": [
       "MEGTALÁLTÁL A HAVAS HEGYEKBEN A FÁK MÖGÖTT A BARLANGOT?",
@@ -652,7 +652,7 @@
     ],
     "minershort-reminder-2-orbs": [
       "DUH, GORDY?",
-      "90 ORBS EGY ERŐSEJTE, WILLARD! URGH!"
+      "0 ORBS EGY ERŐSEJTE, WILLARD! URGH!"
     ],
     "minershort-resolution-1-orbs": [
       "Ó, RENDBEN MÁR.",
@@ -1031,7 +1031,7 @@
       "OH BIZTOS! ÉS PECESELTEM A VÉGEM?",
       "(SÓHAJT)",
       "RENDBEN. BÍRSÁG.",
-      "HOZZ EL 90 ELŐFORMÁT, ÉS EL EGYEZTEM A PONTONOKAT.",
+      "HOZZ EL 0 ELŐFORMÁT, ÉS EL EGYEZTEM A PONTONOKAT.",
       "DE ÚJRA NEM HARCOLOK AZZAL A SZÖRNYETEMEL!"
     ],
     "warrior-reminder-1": [

@@ -983,7 +983,15 @@
   (citb-generator-method-21 this)
   (let ((v1-4 (entity-actor-lookup (-> this entity) 'state-actor 0)))
     (if (not v1-4) (set! v1-4 (-> this entity)))
-    (if (logtest? (-> v1-4 extra perm status) (entity-perm-status complete)) (go citb-generator-broken) (go citb-generator-idle)))
+    (cond
+      ((logtest? (-> v1-4 extra perm status) (entity-perm-status complete))      
+        (go citb-generator-broken))
+      ((task-closed? (-> v1-4 task) (task-status need-resolution))
+        (go citb-generator-break))
+      (else
+        (go citb-generator-idle))
+      )
+    )
   (none))
 
 (defskelgroup *citadelcam-sg*

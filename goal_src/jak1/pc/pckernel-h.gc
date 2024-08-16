@@ -193,6 +193,7 @@
    (discord-rpc?                     symbol) ;; enable discord rich presence integration
    (speedrunner-mode?                symbol) ;; enable speedrunner mode
    (flava-hack                       int64)
+   (finalboss-fix?                   symbol) 
    ;; settings originally stored in the game save
    ;; now stored in pc-settings
    (memcard-volume-sfx               float)
@@ -301,6 +302,7 @@
   (set! (-> obj speedrunner-mode?) #f)
   (set! (-> obj debug-font-scale) 1.0)
   (set! (-> obj debug-font-scale-auto?) #t)
+  (set! (-> obj finalboss-fix?) #t)
   (reset-gfx obj call-handlers)
   (reset-audio obj call-handlers)
   (reset-input obj 'all call-handlers)

@@ -918,6 +918,7 @@
   (set! (-> this sound)
         (new 'process 'ambient-sound (static-sound-spec "buzzer" :pitch-mod -762 :fo-max 40) (-> this root trans)))
   (set! (-> this victory-anim) (fuel-cell-pick-anim this))
+  (set-vector! (-> this draw color-mult) 1.0 0.0 0.0 1.0)  ;; red buzzers for red coins
   (the-as crate this))
 
 (defstate wait (crate-buzzer)

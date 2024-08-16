@@ -796,6 +796,25 @@
   (pad-circle #x2001)
   (pad-x #x2002)
   (pad-square #x2003)
+
+  (training-100-orbs            #x2102)
+  (village1-100-orbs            #x2103)
+  (beach-100-orbs               #x2104)
+  (jungle-100-orbs              #x2105)
+  (misty-100-orbs               #x2106)
+  (firecanyon-100-orbs          #x2107)
+  (village2-100-orbs            #x2108)
+  (sunken-100-orbs              #x2109)
+  (swamp-100-orbs               #x210a)
+  (rolling-100-orbs             #x210b)
+  (ogre-100-orbs                #x210c)
+  (village3-100-orbs            #x210d)
+  (snow-100-orbs                #x210e)
+  (cave-100-orbs                #x210f)
+  (lavatube-100-orbs            #x2110)
+  (citadel-100-orbs             #x2111)
+
+  (finalboss-fix                #x2112)
 ;; GAME-TEXT-ID ENUM ENDS
   )
 

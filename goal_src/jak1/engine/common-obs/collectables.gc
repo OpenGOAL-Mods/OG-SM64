@@ -361,6 +361,9 @@
          v0-3)))
   :enter
     (behavior ()
+      ;; kill cells that have already been collected
+      (if (and (= (-> self type) fuel-cell) (task-closed? (the game-task (-> self fact pickup-amount)) (task-status need-resolution)))
+        (go-virtual die))
       (if (and (logtest? (-> self fact options) (fact-options instant-collect can-collect))
                (logtest? (-> self flags) (collectable-flags can-collect))
                (!= (-> self next-state name) 'pickup)
@@ -946,6 +949,7 @@
               (suspend)
               (ja :num! (loop! f30-1))))))))
 
+(define-extern reset-to-level-start (function game-task none))
 (defstate pickup (fuel-cell)
   :virtual #t
   :enter
@@ -1112,7 +1116,11 @@
   :post
     (behavior ()
       (transform-post)
-      (if (-> self state-object) (spawn (-> self part) (the-as vector (-> self root root-prim prim-core))))))
+      (if (-> self state-object) (spawn (-> self part) (the-as vector (-> self root root-prim prim-core)))))
+  :exit 
+    (behavior ()
+      (when *target* (reset-to-level-start (the game-task (-> self fact pickup-amount))))
+      (none)))
 
 (defmethod initialize ((this fuel-cell))
   (stack-size-set! (-> this main-thread) 512)
@@ -1174,11 +1182,13 @@
        (set! (-> self jump-pos quad) (-> *fuel-cell-tune-pos* quad))
        (+! (-> self jump-pos y) 4096.0)
        (go-virtual jump))
-      ((and gp-1
+      ((and ;; gp-1
             (not (logtest? (res-lump-value (-> self entity) 'options fact-options :time (the-as float -1000000000.0))
                            (fact-options skip-jump-anim)))
             (not (logtest? (-> self fact options) (fact-options skip-jump-anim))))
-       (set! (-> self jump-pos quad) (-> (the-as vector gp-1) quad))
+        (cond
+          (gp-1 (set! (-> self jump-pos quad) (-> (the-as vector gp-1) quad)))
+          (else (set! (-> self jump-pos quad) (-> arg0 quad))))
        (+! (-> self jump-pos y) 4096.0)
        (go-virtual jump))))
   (set! (-> self event-hook) (-> (method-of-object self wait) event))
@@ -1358,6 +1368,7 @@
   (set! (-> this collect-timeout) (seconds 2))
   (update-transforms! (-> this root))
   (update-trans! (-> this sound) (-> this root trans))
+  (set-vector! (-> this draw color-mult) 1.0 0.0 0.0 1.0)  ;; red buzzers for red coins
   (if (and (-> this entity) (logtest? (-> this entity extra perm status) (entity-perm-status complete)))
     (go (method-of-object this wait))
     (go (method-of-object this pickup) #t (the-as handle #f)))
@@ -1382,6 +1393,7 @@
   (update-transforms! (-> self root))
   (update-trans! (-> self sound) (-> self root trans))
   (set! (-> self event-hook) (-> (method-of-object self wait) event))
+  (set-vector! (-> self draw color-mult) 1.0 0.0 0.0 1.0)  ;; red buzzers for red coins
   (go-virtual wait)
   (none))
 

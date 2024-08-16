@@ -522,7 +522,9 @@
   (rigid-body-platform-method-29 this *ogre-step-constants*)
   (call-parent-method this)
   (let ((a0-5 (entity-actor-lookup (-> this entity) 'alt-actor 0)))
-    (if (and a0-5 (logtest? (-> a0-5 extra perm status) (entity-perm-status complete))) (set! (-> this active) #t)))
+    (if (or (and a0-5 (logtest? (-> a0-5 extra perm status) (entity-perm-status complete)))
+            (task-closed? (game-task ogre-boss) (task-status need-reminder)))
+      (set! (-> this active) #t)))
   0
   (none))
 
@@ -901,7 +903,8 @@
       (set! (-> this joint-mod-array s5-1) (the-as joint-mod v1-185))
       (vector-reset! (-> v1-185 transform scale))))
   (cond
-    ((and (-> this entity) (logtest? (-> this entity extra perm status) (entity-perm-status complete)))
+    ((or (and (-> this entity) (logtest? (-> this entity extra perm status) (entity-perm-status complete)))
+         (task-closed? (game-task ogre-boss) (task-status need-reminder)))
      (set! (-> this dead-joint-count) 8)
      (ogre-bridge-update-joints)
      (go ogre-bridge-activated))

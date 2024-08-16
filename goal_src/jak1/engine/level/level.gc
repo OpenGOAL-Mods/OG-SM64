@@ -703,7 +703,7 @@
 ;; method 27 level
 
 ;; method 10 level
-(defmethod is-object-visible? ((this level) (arg0 int))
+(defmethod is-object-visible? ((this level) (arg0 int) (actor entity))
   "Is arg0 visible? Note that this will return #f if the visibility data is not loaded."
   ;; og:mod-base anything thats not a vanilla level -> always show actors
   (case (-> this name) :comp name=
@@ -722,7 +722,7 @@
 
   ;; og:preserve-this pc port added option to show every actor regardless
   (with-pc
-    (if (not (-> *pc-settings* ps2-actor-vis?)) (return #t)))
+    (if (or (= (-> (the entity-actor actor) etype) fuel-cell) (not (-> *pc-settings* ps2-actor-vis?))) (return #t)))
   ;; check the vis bits!
   (let* (;; lwu v1, 388(a0)
          (vis-data (-> this vis-bits))

@@ -1121,6 +1121,7 @@
       (go target-flut-hit-ground))
   :post target-flut-post)
 
+(define-extern reset-to-level-start (function game-task none))
 (defstate target-flut-death (target)
   :event
     (-> target-death
@@ -1130,7 +1131,8 @@
       (logclear! (-> self state-flags) (state-flags being-attacked dying))
       (target-exit)
       (remove-setting! 'process-mask)
-      (apply-settings *setting-control*))
+      (apply-settings *setting-control*)
+      (reset-to-level-start (game-task none)))
   :trans
     (-> target-hit
         trans)

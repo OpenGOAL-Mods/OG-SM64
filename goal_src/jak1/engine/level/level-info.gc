@@ -113,7 +113,7 @@
              :lev1 'village1
              :disp1 'special))
        :tasks
-       '(92 93 94 95)
+       '(92 93 94 95) ;; 116
        :priority 100
        :load-commands
        '()
@@ -257,7 +257,7 @@
              :lev1 'misty
              :disp1 #f))
        :tasks
-       '(10 11 12 13 14 75)
+       '(10 11 12 13 14 75) ;; 117)
        :priority #xc8
        :load-commands
        '()
@@ -310,7 +310,7 @@
              :lev1 'village1
              :disp1 'display))
        :tasks
-       '(15 16 17 18 19 20 21 22)
+       '(15 16 17 18 19 20 21 22 118)
        :priority 100
        :load-commands
        '()
@@ -363,7 +363,7 @@
              :lev1 'village1
              :disp1 'display))
        :tasks
-       '(2 3 4 5 7 8 9)
+       '(2 3 4 5 7 8 9 119)
        :priority 100
        :load-commands
        '()
@@ -598,7 +598,7 @@
              :lev1 'village1
              :disp1 'special))
        :tasks
-       '(23 24 25 26 27 28 29 30)
+       '(23 24 25 26 27 28 29 30 120)
        :priority 100
        :load-commands
        '()
@@ -669,7 +669,7 @@
              :lev1 'firecanyon
              :disp1 'display))
        :tasks
-       '(68 69)
+       '(68 69) ;; 121)
        :priority 100
        :load-commands
        '()
@@ -760,7 +760,7 @@
              :lev1 'rolling
              :disp1 #f))
        :tasks
-       '(31 32 34 35 76)
+       '(31 32 34 35 76) ;; 122)
        :priority #xc8
        :load-commands
        '()
@@ -869,7 +869,7 @@
              :lev1 'sunkenb
              :disp1 #f))
        :tasks
-       '()
+       '(44 45 46 47 48 49 50 51 123)
        :priority 100
        :load-commands
        '()
@@ -1142,7 +1142,7 @@
              :lev1 'village2
              :disp1 'special-vis))
        :tasks
-       '(36 37 38 39 40 41 42 43)
+       '(36 37 38 39 40 41 42 43 124)
        :priority 100
        :load-commands
        '()
@@ -1194,7 +1194,7 @@
              :lev1 'village2
              :disp1 'display))
        :tasks
-       '(52 53 54 55 56 57 58 59)
+       '(52 53 54 55 56 57 58 59 125)
        :priority 100
        :load-commands
        '()
@@ -1284,7 +1284,7 @@
              :lev1 'ogre
              :disp1 'display))
        :tasks
-       '(86 87 110 88)
+       '(86 87 110 88) ;; 126)
        :priority 100
        :load-commands
        '()
@@ -1375,7 +1375,7 @@
              :lev1 'snow
              :disp1 #f))
        :tasks
-       '(96 97 98 99 100 101 74 77)
+       '(96 97 98 99 100 101 74 77) ;; 127)
        :priority #xc8
        :load-commands
        '()
@@ -1580,7 +1580,7 @@
              :lev1 'village3
              :disp1 'display))
        :tasks
-       '(60 61 62 63 64 66 67 65)
+       '(60 61 62 63 64 66 67 65 128)
        :priority 100
        :load-commands
        '()
@@ -1670,7 +1670,7 @@
              :lev1 'robocave
              :disp1 #f))
        :tasks
-       '(78 79 80 81 82 83 84 85)
+       '(78 79 80 81 82 83 84 85 129)
        :priority 100
        :load-commands
        '()
@@ -1902,7 +1902,7 @@
              :lev1 'citadel
              :disp1 'display))
        :tasks
-       '(89 90)
+       '(89 90) ;; 130)
        :priority 100
        :load-commands
        '()
@@ -2126,7 +2126,7 @@
              :lev1 'finalboss
              :disp1 #f))
        :tasks
-       '(70 71 72 73 91)
+       '(70 71 72 73 91 131)
        :priority 100
        :load-commands
        '()

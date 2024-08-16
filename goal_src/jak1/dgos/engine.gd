@@ -311,5 +311,6 @@
   "entity-debug.o" ;; added
   "subtitle.o" ;; added
   "default-menu-pc.o" ;; added
+  "mods_sm64.o" ;; added
  ))
 

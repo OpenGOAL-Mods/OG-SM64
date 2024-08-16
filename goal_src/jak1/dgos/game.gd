@@ -371,4 +371,5 @@
   ;; keep blocking-plane stuff loaded
   "blocking-plane.o"
   "ef-plane-ag.go"
+  "mods_sm64.o" ;; added
  ))

@@ -145,6 +145,7 @@
   "Get the permanent storage for a game-task"
   (-> this task-perm-list data arg0))
 
+(define-extern restore-completed-tasks (function none))
 (defmethod initialize! ((this game-info) (cause symbol) (save-to-load game-save) (continue-point-override string))
   "Initialize the game-info.
     The cause can be 'dead if you die, or 'game to reset everything.
@@ -188,7 +189,7 @@
                       ((and *debug-segment* (not (string= startingDebugContinuePoint "village1-hut"))) startingDebugContinuePoint) ;; mod-base-change
                       (*debug-segment* "village1-hut")
                       (else "title-start")))
-     (set! (-> this auto-save-count) 0)
+    ;;  (set! (-> this auto-save-count) 0)
      (set! (-> *setting-control* default auto-save) #f)
      (set! (-> this money) 0.0)
      (set! (-> this fuel) 0.0)
@@ -255,6 +256,7 @@
              (set! arg2 (get-or-create-continue! *game-info*)))
            (suspend)
            (start arg0 arg2)
+           (if (= cause 'game)  (restore-completed-tasks))
            (none))
          (-> this mode)
          cause
@@ -284,13 +286,32 @@
            ;; we have task data for this level!
            (when (>= (-> *level-task-data-remap* length) (-> proc entity extra level info index))
              ;; get the level index
-             (let ((level-idx (-> *level-task-data-remap* (+ (-> proc entity extra level info index) -1))))
+            (let* ((level-idx (-> *level-task-data-remap* (+ (-> proc entity extra level info index) -1)))
+                   (old-amt (-> this money-per-level level-idx))
+                   (game-task-100-orbs (the game-task (+ 116 level-idx)))  ;; 116 is training-100-orbs, others follow in order
+                   )
                ;; increment the level money count
                (+! (-> this money-per-level level-idx) (the int amount))
                ;; increment our total money in the game (out of the 2000 max orbs)
                (+! (-> this money-total) amount)
                ;; if we have all the money in our level, display the all orbs graphic
-               (if (= (-> this money-per-level level-idx) (-> (get-game-count level-idx) money-count)) (activate-orb-all level-idx)))))))
+               ;; hijacked for showing cell pickup per level
+               ;; (if (= (-> this money-per-level level-idx) (-> (get-game-count level-idx) money-count)) (activate-orb-all level-idx))
+               ;; if we have just reached 100+ orbs in the level, and haven't gotten the 100 orb cell yet, birth the cell
+               (when (and (< old-amt 100)
+                          (>= (-> this money-per-level level-idx) 100)
+                          (task-exists? game-task-100-orbs (task-status need-resolution))
+                          (not (task-closed? game-task-100-orbs (task-status need-resolution)))
+                          )
+                  (let ((fact (new 'static 'fact-info)))
+                    (logior! (-> fact options) (fact-options instant-collect))
+                    (birth-pickup-at-point
+                      (vector+! (new 'stack-no-clear 'vector) (-> (the process-drawable proc) root trans) (new 'static 'vector :y 4096.0 :w 1.0))
+                      (pickup-type fuel-cell)
+                      (the float game-task-100-orbs)
+                      #f
+                      *target*
+                      fact))))))))
      ;; increment our current money count
      (+! (-> this money) amount))
     (('fuel-cell)
@@ -326,7 +347,14 @@
            (when (and (>= buzz-index 0) (< buzz-index (the int (-> *FACT-bank* buzzer-max-default))))
              ;; valid fly index
              ;; increment total if we haven't collected it before
-             (if (not (logtest? buzz-bits (ash 1 buzz-index))) (+! (-> this buzzer-total) 1.0))
+             (when (zero? (logand buzz-bits (ash 1 buzz-index)))
+              (+! (-> this buzzer-total) 1.0)
+              ;; pickup 2 orbs (SM64 red coins count as 2x coins)
+              (pickup-collectable!
+                (-> *target* fact)
+                (pickup-type money)
+                2.0
+                source))
              ;; set the updated bits
              (let ((t9-10 (method-of-object ctrl save-reminder)))
                (set! buzz-bits (logior buzz-bits (ash 1 buzz-index)))

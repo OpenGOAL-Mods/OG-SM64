@@ -597,6 +597,7 @@
       (go target-racing))
   :post target-no-stick-post)
 
+(define-extern reset-to-level-start (function game-task none))
 (defstate target-racing-death (target)
   :event
     (-> target-death
@@ -611,7 +612,8 @@
       (restore-collide-with-as (-> self control))
       ((-> target-racing-start exit))
       (target-exit)
-      (set! (-> self racer stick-off) #f))
+      (set! (-> self racer stick-off) #f)
+      (reset-to-level-start (game-task none)))
   :code
     (behavior ((arg0 symbol))
       (local-vars (v1-154 symbol))
