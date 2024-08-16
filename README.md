@@ -1,6 +1,6 @@
 # OpenGoal Jak 1 - Super Mario 64 style
 
-https://opengoal-unofficial-mods.github.io/
+https://jakmods.dev
 
 - Gameplay mimicks SM64, with:
   - Stars -> Power Cells
