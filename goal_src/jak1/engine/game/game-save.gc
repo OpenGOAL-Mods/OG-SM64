@@ -720,7 +720,7 @@
     (let ((a1-68 (-> *level* level s4-1))) (if (= (-> a1-68 status) 'active) (copy-perms-to-level! this a1-68))))
   ;; update tasks
   (let ((s5-1 (the int (game-task jungle-eggtop)))
-        (s4-2 (the int (game-task max)))
+        (s4-2 (the int (game-task max))) ;; max - 1  mod-base-change changed to use enum
         )
     (while (> (the-as uint s4-2) (the-as uint s5-1))
       ;; calling this will run the function to see if the task is done or not

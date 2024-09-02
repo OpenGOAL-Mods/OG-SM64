@@ -1,8 +1,6 @@
 ;;-*-Lisp-*-
 (in-package goal)
-
 (require "kernel-defs.gc")
-
 
 ;; LiveSplit ASL requires all settings to initalized _before_ you connect the process
 ;; Therefore everything has to be laid out in a predictable fashion before hand
