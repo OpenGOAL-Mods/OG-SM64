@@ -46,8 +46,12 @@ permissions:
   contents: write
 
 jobs:
-  cut_release:
-    name: "Cut Release"
+  prep_vars:
+    name: "Prep Variables"
+    runs-on: ubuntu-latest
+    outputs:
+      supported_games: ${{ steps.prep-vars.outputs.GAMES }}
+      tooling_repo: ${{ steps.prep-vars.outputs.REPO }}
     steps:
       - name: Prep Variables
         id: prep-vars
@@ -63,12 +67,14 @@ jobs:
           if [[ ${{ inputs.binary_source == 'vanilla' }} ]]; then REPO=open-goal/jak-project; fi
           echo "REPO=$REPO" >> $GITHUB_OUTPUT
 
-      - name: Cut Release
-        uses: open-goal/mod-bundling-tools/.github/workflows/create-mod-release.yml@v1
-        with:
-          semverBump: ${{ inputs.bump }}
-          metadataSupportedGames: ${{ steps.prep-vars.outputs.GAMES }}
-          buildBinaries: ${{ inputs.binary_source == 'build_binaries'}}
-          toolingRepo: ${{ steps.prep-vars.outputs.REPO }}
+  cut_release:
+    name: "Cut Release"
+    needs: prep_vars
+    uses: open-goal/mod-bundling-tools/.github/workflows/create-mod-release.yml@v1
+    with:
+      semverBump: ${{ inputs.bump }}
+      metadataSupportedGames: ${{ needs.prep_vars.outputs.supported_games }}
+      buildBinaries: ${{ inputs.binary_source == 'build_binaries'}}
+      toolingRepo: ${{ needs.prep_vars.outputs.tooling_repo }}
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
