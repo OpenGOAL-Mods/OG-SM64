@@ -307,13 +307,6 @@ jobs:
       - name: "Checkout Repository"
         uses: actions/checkout@v4
 
-      - name: "Checkout Workflow Scripts"
-        uses: actions/checkout@v4
-        with:
-          repository: "open-goal/mod-bundling-tools"
-          ref: ${{ github.event.inputs.ref }}
-          path: ".github"
-
       - name: "Create Linux Release"
         env:
           outputDir: ${{ inputs.outputDir }}
