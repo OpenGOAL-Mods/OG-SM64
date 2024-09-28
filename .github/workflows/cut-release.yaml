@@ -1,4 +1,4 @@
-name: 🏭 Cut Mod Release
+name: ⭐ Cut Mod Release ⭐
 
 on:
   workflow_dispatch:
@@ -67,10 +67,10 @@ jobs:
           if [[ ${{ inputs.binary_source == 'vanilla' }} ]]; then REPO=open-goal/jak-project; fi
           echo "REPO=$REPO" >> $GITHUB_OUTPUT
 
-  cut_release:
-    name: "Cut Release"
+  cut_mod_release:
+    name: "Cut Mod Release"
     needs: prep_vars
-    uses: open-goal/mod-bundling-tools/.github/workflows/create-mod-release.yml@v1
+    uses: .github/workflows/mod-release-pipeline.yml
     with:
       semverBump: ${{ inputs.bump }}
       metadataSupportedGames: ${{ needs.prep_vars.outputs.supported_games }}
